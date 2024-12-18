@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <link rel="stylesheet" href="style.css">
+  
+  
+</head>
+<body>
+  <form action="submit" method="post" 
+  onsubmit=" return validateForm(event)">
+    <header>
+      <h1>Register Now</h1>
+    </header>
+
+    <fieldset>
+      <!-- <legend>Please make sure that all your details are valid</legend> -->
+
+      <!-- Title Section -->
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <select name="title" id="title" required>
+          <option value="" disabled selected>Select Title</option>
+          <option value="Mr">Mr</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Ms">Ms</option>
+        </select>
+      </div>
+
+      <!-- Name Section -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+      </div>
+
+      <!-- Gender Section -->
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+
+      <!-- Date of Birth Section -->
+      <div class="form-group">
+        <label for="dateofbirth">Date of Birth:</label>
+        <input type="date" name="dateofbirth" id="dateofbirth" required>
+      </div>
+
+      <!-- Email Section -->
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email (e.g., kofi12@gmail.com)" required>
+      </div>
+
+      <!-- Phone Number Section -->
+      <div class="form-group">
+        <label for="phonenumber">Phone Number:</label>
+        <input type="tel" name="phonenumber" id="phonenumber" placeholder="Enter your phone number" required>
+      </div>
+
+      <!-- WhatsApp Section -->
+      <div class="form-group">
+        <label for="whatsapp">WhatsApp:</label>
+        <input type="tel" name="whatsapp" id="whatsapp" placeholder="Enter your WhatsApp number">
+      </div>
+
+      <!-- Location Section -->
+      <!-- <div class="form-group">
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" placeholder="Your Location">
+      </div> -->
+
+      <!-- Address Section -->
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" name="address" id="address" placeholder="Enter your residential address">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button type="button" onclick="generatePDF()">Dwnload PDF</button>
+
+      </div>
+    </fieldset>
+  </form>
+
+
+  <script src="script.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.4.0/dist/jspdf.umd.min.js"></script>
+
+
+</body>
+</html>
